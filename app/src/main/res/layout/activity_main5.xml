@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E3E7"
+    android:gravity="fill|top"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="407dp"
+            android:layout_height="286dp"
+            android:text=" " />
+
+        <Button
+            android:layout_width="410dp"
+            android:layout_height="56dp"
+            android:backgroundTint="#9C989B"
+            android:layout_gravity="center_horizontal"
+            android:insetLeft="10dp"
+            android:insetTop="6dp"
+            android:insetRight="10dp"
+            android:textColor="#ffffff"
+            android:gravity="start"
+            android:insetBottom="6dp"
+            android:text="Enter username or email"
+            android:textSize="20sp"
+            app:iconPadding="8dp"
+            app:iconTint="#AF1F92" />
+
+        <Button
+            android:layout_width="410dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#9C989B"
+            android:gravity="start"
+            android:insetLeft="10dp"
+            android:insetRight="10dp"
+            android:textColor="#ffffff"
+            android:text="Enter password"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="200dp"
+            android:textColor="#ffffff"
+            android:layout_height="72dp"
+            android:backgroundTint="#9C8098"
+            android:layout_gravity="center_horizontal"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:text="Sign Up"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
