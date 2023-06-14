@@ -20,12 +20,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
     }
-
-    void assignId(MaterialButton btn,int id){
-        btn = findViewById(id);
-        btn.setOnClickListener(this);
-
-    }
     int val1=0,val2=0,result=0,c=0,s=0;
     public void onClick(View view)
     {
