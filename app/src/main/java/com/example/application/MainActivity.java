@@ -46,40 +46,77 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btn.setOnClickListener(this);
 
     }
-
+    int val1=0,val2=0,result=0,c=0,s=0;
     public void onClick(View view)
     {
         Button button=(Button)view;
         String text= button.getText().toString();
-        int val1=0,val2=0,result=0,c=0,s=0;
-        if(text=="1"||text=="2"||text=="3"||text=="4"||text=="5"||text=="6"||text=="7"||text=="8"||text=="9"||text=="0")
-        {
-            screen.setText(String.valueOf(val1));
-            if(s==0)
-            val1=Integer.parseInt(text)*(10^c);
 
-            else
-                val2=Integer.parseInt(text)*(10^c);
+        if(text.equals("1")||text.equals("2")||text.equals("3")||text.equals("4")||text.equals("5")||text.equals("6")||text.equals("7")||text.equals("8")||text.equals("9")||text.equals("0"))
+        {
+            if(s==0) {
+                val1 = (int) ((val1 * 10) + Integer.parseInt(text));
+                screen.setText(String.valueOf(val1));
+            }
+            else {
+                val2 = (int) ((val2 * 10) + Integer.parseInt(text));
+                screen.setText(screen.getText().toString()+text);
+            }
             c++;
         }
-        if(text=="+") {
+        else if(text.equals("+")) {
+            screen.setText(screen.getText().toString()+"+");
+            if(val2!=0) {
+                val1 = calc(val1, val2, s);
+                val2=0;
+            }
             s = 1;
             c=0;
         }
-        if(text=="-") {
+        else if(text.equals("-")) {
+            screen.setText(screen.getText().toString()+"-");
+            if(val2!=0) {
+                val1 = calc(val1, val2, s);
+                val2=0;
+            }
             s = 2;
             c = 0;
         }
-        if(text=="/") {
+        else if(text.equals("/")) {
+            screen.setText(screen.getText().toString()+"/");
+            if(val2!=0) {
+                val1 = calc(val1, val2, s);
+                val2=0;
+            }
             s = 3;
             c = 0;
         }
-        if(text=="*") {
+        else if(text.equals("*")) {
+            screen.setText(screen.getText().toString()+"*");
+            if(val2!=0) {
+                val1 = calc(val1, val2, s);
+                val2=0;
+            }
             s = 4;
             c = 0;
         }
-        if(text=="=")
+        else if(text.equals("="))
         {
+            result=calc(val1,val2,s);
+            screen.setText(String.valueOf(result));
+        }
+        else if(text.equals("C"))
+        {
+            s=0;
+            c=0;
+            val1=0;
+            val2=0;
+            screen.setText("0");
+        }
+        }
+        int calc(int val1,int val2,int s)
+        {
+            int result=0;
             switch(s)
             {
                 case 1: result=val1+val2; break;
@@ -88,16 +125,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 case 4: result=val1*val2; break;
 
             }
-            screen.setText(String.valueOf(result));
-        }
-        if(text=="C")
-        {
-            s=0;
-            c=0;
-            val1=0;
-            val2=0;
-            screen.setText("0");
-        }
+            return(result);
         }
 
     @Override
