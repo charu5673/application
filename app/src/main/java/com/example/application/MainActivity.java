@@ -11,32 +11,12 @@ import com.google.android.material.button.MaterialButton;
 
 public class MainActivity extends Activity implements View.OnClickListener {
     TextView screen;
-    MaterialButton button1,button2,button3,button4,button5,button6,button7,button8,button9,button0,buttonm,buttond,buttona,buttons,buttonc,buttone;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         screen = findViewById(R.id.screen);
-        assignId(buttonc,R.id.buttonc);
-        assignId(buttond,R.id.buttond);
-        assignId(buttonm,R.id.buttonm);
-        assignId(buttona,R.id.buttona);
-        assignId(buttons,R.id.buttons);
-        assignId(buttone,R.id.buttone);
-        assignId(button0,R.id.button0);
-        assignId(button1,R.id.button1);
-        assignId(button2,R.id.button2);
-        assignId(button3,R.id.button3);
-        assignId(button4,R.id.button4);
-        assignId(button5,R.id.button5);
-        assignId(button6,R.id.button6);
-        assignId(button7,R.id.button7);
-        assignId(button8,R.id.button8);
-        assignId(button9,R.id.button9);
-
-
-
 
 
     }
